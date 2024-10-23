@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="orangee.ico">
+    <link rel="stylesheet" type="text/css" href="1.css">
+    <title>모기</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+            </ul>
+        </nav>
+    </footer>
+<img id="object1" src="리처드4.jfif" alt="리처드" style="position: fixed; top: 200px; left: 200px; width: 100px; height: auto; border-radius: 10%;">
+
+    <div id="object2"></div>
+    <div id="object3"></div>
+    <img id="object4" src="참새.png" alt="참새" class="fade-in">
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+    <script src="3.js"></script>
+
+    <div class="cursor rounded"></div>
+    <div class="cursor pointed"></div>
+
+    <script>
+        const roundedCursor = document.querySelector('.cursor.rounded');
+        const pointedCursor = document.querySelector('.cursor.pointed');
+
+        document.addEventListener('mousemove', (e) => {
+            roundedCursor.style.left = `${e.clientX}px`;
+            roundedCursor.style.top = `${e.clientY}px`;
+            pointedCursor.style.left = `${e.clientX + 13}px`;
+            pointedCursor.style.top = `${e.clientY + 4}px`;
+        });
+    </script>
+</body>
+</html>

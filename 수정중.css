@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Pretendard-Regular;
+  src: url('Pretendard-Regular.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  cursor: none;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: rgb(179, 153, 196);
+}
+
+.cursor {
+  position: fixed;
+  z-index: 1000;
+}
+
+.rounded {
+  width: 30px;
+  height: 10px;
+  border: 2px solid #000000;
+  border-radius: 90%;
+}
+
+.pointed {
+  width: 7px;
+  height: 7px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  margin-bottom: 20rem;
+}
+
+.content-container {
+  font-size: 100px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  flex: 1;                 
+}
+
+.floating-text {
+  position: absolute;
+  white-space: nowrap; 
+  font-size:medium; 
+  transition: left 0.5s ease, top 0.5s ease; 
+  color: #000000; 
+}
+
+/* 하단 네비게이션 */
+footer {
+  margin-top: auto;
+  padding: 20px 0; 
+}
+
+footer nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; 
+  padding-left: 20px;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+footer nav ul li {
+  position: relative;
+  margin: 0 10px;
+}
+
+footer nav ul li a {
+  display: block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000000;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 60%;
+  transition: background-color 0.3s ease; 
+}
+
+footer nav ul li a:hover {
+  background-color: #5555557e;
+  color: #ffffff;
+}
+
+.menuitem {
+  border: none;
+  height: auto;
+  display: none; 
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 2px;
+  left: 0;
+  z-index: 1;
+}
+
+footer nav ul li:hover .menuitem {
+  display: block; 
+}
+
+.menuitem li {
+  margin: 2px; 
+}
+
+.menuitem li a:hover {
+  background-color: #5555557e;
+  color: #ffffff;
+}

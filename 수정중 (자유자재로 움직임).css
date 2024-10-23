@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Pretendard-Regular;
+    src: url('Pretendard-Regular.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: none;
+    height: 100vh; /* 스크롤 방지를 위해 150vh 대신 100vh로 수정 */
+    overflow: hidden; /* 스크롤 방지 */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(179, 153, 196);
+}
+
+.cursor {
+    position: fixed; /* 화면에 고정 */
+    z-index: 1000; /* 다른 요소들보다 위에 오도록 설정 */
+}
+
+.rounded {
+    width: 30px;
+    height: 10px;
+    border: 2px solid #000000;
+    border-radius: 90%;
+}
+
+.pointed {
+    width: 7px;
+    height: 7px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-bottom: 20rem;
+}
+
+ /* 중앙 콘텐츠 */
+.content-container {
+    font-size: 100px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    flex: 1;                 
+    }
+/*날아다니는 글자*/
+   .floating-text {
+        position: absolute;
+        top: 50%; /* 화면 중앙 */
+        left: 100%; /* 화면 밖으로 시작 */
+        white-space: nowrap; /* 줄 바꿈 방지 */
+        font-size: 2rem; /* 글자 크기 */
+        transition: left 0.5s ease, top 0.5s ease; /* 부드러운 위치 전환 */
+    }
+  
+  /* 하단 네비게이션 */
+  footer {
+    margin-top: auto;
+    padding: 20px 0; 
+  }
+
+  /* footer 안의 항목들을 왼쪽 정렬로 배치 */
+  footer nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; 
+    padding-left: 20px;
+  }
+
+  /* 네비게이션 스타일 */
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+  }
+
+  footer nav ul li {
+    position: relative;
+    margin: 0 10px;
+  }
+
+  /* 납작한 타원형 버튼 스타일 */
+  footer nav ul li a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000000;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 60%; /* 납작한 타원형 */
+    transition: background-color 0.3s ease; 
+  }
+
+  /* 마우스 올렸을 때 배경색 변경 */
+  footer nav ul li a:hover {
+    background-color: #5555557e;
+    color: #ffffff;
+  }
+
+  /* 서브 메뉴 기본 숨김 */
+.menuitem {
+    border: none;
+    height: auto;
+    display: none; 
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 2px;
+    left: 0;
+    z-index: 1;
+    padding: 12px 0;
+}
+
+/* 마우스를 올렸을 때 서브 메뉴 표시 */
+footer nav ul li:hover .menuitem {
+    display: block; 
+}
+
+/* 서브 메뉴 항목 스타일 */
+.menuitem li {
+    margin: 2px; 
+}
+
+
+/* 서브 메뉴 항목 마우스 오버 스타일 */
+.menuitem li a:hover {
+    background-color: #5555557e;
+    color: #ffffff;
+}
+
+.floating-text {
+    color: #000000; 
+    font-size: 2rem; 
+    transition: left 0.1s linear, top 0.1s linear; 
+}
