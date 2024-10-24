@@ -72,7 +72,7 @@ function moveTexts() {
         text.style.left = `${x}px`;
         text.style.top = `${y}px`;
 
-        // 회전 각도 업데이트
+        // 회전 각도
         const rotationAngle = (angle + index * (Math.PI / 10)) * (180 / Math.PI); // 각도 계산 (도 단위)
         text.style.transform = `rotateY(${rotationAngle}deg)`; // Y축으로 회전
     });
