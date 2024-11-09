@@ -49,7 +49,7 @@ function moveTexts() {
         let offsetX;
         switch (index) {
             case 0:
-                offsetX = -100; // 왼쪽
+                offsetX = -10; // 왼쪽
                 break;
             case 1:
                 offsetX = -50; // 중간 왼쪽
@@ -58,7 +58,7 @@ function moveTexts() {
                 offsetX = 0; // 중앙
                 break;
             case 3:
-                offsetX = 50; // 중간 오른쪽
+                offsetX = -50; // 중간 오른쪽
                 break;
             case 4:
                 offsetX = 0; // 오른쪽
