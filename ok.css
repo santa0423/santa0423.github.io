@@ -1,0 +1,174 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* 페이지 스크롤 막기 */
+}
+
+/* Fortune Text */
+.fortune-text {
+  color: white;
+  text-align: center;
+  margin-bottom: 50px; /* Adjusted spacing */
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 50px; /* Adjusted spacing */
+}
+
+.fortune-text.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0px); /* More downward movement */
+}
+
+.fortune-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.fortune-text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Card Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  flex-wrap: nowrap; /* Cards stay in a single row */
+}
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70mm;
+  height: 120mm;
+  background-color: #04bfbf;
+  color: white;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(20px); /* Slight downward shift */
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.5);
+}
+
+/* Card Title Styling */
+.card-title {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+  text-align: center;
+  top: -40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-title.left {
+  left: 0;
+}
+
+.card-title.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-title.right {
+  right: 0;
+}
+
+/* Selected Card Styling */
+.card.selected {
+  box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.5);
+  opacity: 1;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%) scale(1.2); /* Card enlarges */
+}
+
+/* Hidden Card Styling */
+.card.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+
+.card.hidden .card-title {
+  opacity: 0;
+}
+
+.card-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .fortune-text {
+    margin-bottom: 30px;
+    margin-top: 20px; /* Reduce the top margin */
+  }
+
+  .fortune-text h1 {
+    font-size: 28px; /* Smaller font size */
+  }
+
+  .fortune-text p {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .container {
+    gap: 10px; /* Reduce the gap on mobile */
+    justify-content: center; /* Keep cards centered */
+  }
+
+  .card {
+    width: 50mm; /* Smaller card size */
+    height: 80mm; /* Smaller card height */
+    font-size: 18px; /* Smaller text on cards */
+  }
+
+  .card-title {
+    font-size: 16px; /* Smaller font for card titles */
+  }
+
+  /* Adjust the selected card style for mobile */
+  .card.selected {
+    transform: translate(-50%, -60%) scale(1.1); /* Slightly smaller scaling */
+  }
+}

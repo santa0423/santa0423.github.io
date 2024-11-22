@@ -1,4 +1,4 @@
-// 커서 애니메이션
+// 텍스트 애니메이션
 const roundedCursor = document.querySelector('.cursor.rounded');
 const pointedCursor = document.querySelector('.cursor.pointed');
 const floatingTexts = document.querySelectorAll('.floating-text'); 
@@ -7,19 +7,6 @@ const radiusX = 400; // X축 방향 반경
 let angle = 0; // 초기 각도
 const speed = 0.01; // 텍스트의 이동 속도
 
-// 커서 위치 업데이트
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    // 둥근 커서 위치
-    roundedCursor.style.left = `${mouseX}px`;
-    roundedCursor.style.top = `${mouseY}px`;
-
-    // 뾰족한 커서 위치
-    pointedCursor.style.left = `${mouseX + 13}px`;
-    pointedCursor.style.top = `${mouseY + 4}px`;
-});
 
 // 자연스럽게 움직이는 텍스트 애니메이션
 function moveTexts() {
