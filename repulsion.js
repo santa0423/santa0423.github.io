@@ -1,30 +1,54 @@
-// 카드 선택 시 발생하는 함수
-function selectCard(cardId) {
-    const allCards = document.querySelectorAll('.card');
-    const selectedCard = document.getElementById(`card-${cardId}`);
-    const fortuneText = document.querySelector('.fortune-text');
+// repulsion 인터랙션을 적용할 요소는 클래스를 repulsive로 지정 (class=".repulsive")
+
+
+let trigDist = 200; // 마우스 커서와 오브젝트 간의 거리가 trigDist보다 작으면 오브젝트가 멀어짐
+
+$(function(){
+    $(document).on(
+        'mousemove', 
+        function(e){
     
-    // 카드 전환 중 스크롤을 방지
-    document.body.style.overflow = 'hidden';
-  
-    // 선택된 카드를 중앙으로 이동하고 확대
-    selectedCard.classList.add('selected');
+            $('.repulsive').toArray().forEach(element => {
+                let moving = false;
+                let ox = $(element).position().left + $(element).width()/2;
+                let oy = $(element).position().top + $(element).height()/2;
+                let mx = e.pageX;
+                let my = e.pageY;
+                let d = distance(ox, oy, mx, my);
     
-    // 나머지 카드는 사라지게
-    allCards.forEach(card => {
-      if (card !== selectedCard) {
-        card.classList.add('hidden'); // 카드와 텍스트를 숨김
-      }
-    });
-    
-    // fortune-text도 사라지게
-    fortuneText.classList.add('hidden');
-    
-    // 페이지 전환을 위해 숨겨짐
-    setTimeout(() => {
-      // 페이지 전환
-      window.location.href = "next_page.html"; // 다른 페이지로 이동
-      document.body.style.overflow = 'auto'; // 전환 후 스크롤 재활성화
-    }, 1500); // 1.5초 후에 페이지 전환 (애니메이션 종료 후)
-  }
-  
+                if(!moving && d<=trigDist) {
+                    moving = true;
+                    gsap.to(
+                        $(element),
+                        {
+                            x: (ox - mx) + $(element).width()/2,
+                            y: (oy - my) + $(element).height()/2,
+                            //rotation: '+=60',
+                            duration: 3.0,
+                            ease: 'elastic.out',
+                            onComplete: function(){ }
+                        }
+                    );
+                }
+            });
+        }
+    );
+
+    //  repulsive 클래스의 오브젝트를 클릭했을 때 발생하는 이벤트
+    $('.repulsive').on(
+        'click',
+        function(){
+            //$(this).fadeOut(500); // 클릭한 오브젝트를 페이드아웃 처리
+            window.open('http://dxdesign.kr', '_blank'); // 클릭 시 새 창으로 url(또는 파일) 열기
+            //window.open('http://dxdesign.kr', '_self'); // 현재의 창에 열기
+        }
+    );
+});
+
+
+
+// 두 점 사이의 거리를 계산하는 함수
+function distance(x1, y1, x2, y2) {
+    let result = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+    return result;
+}
