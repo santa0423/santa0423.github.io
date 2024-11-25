@@ -1,0 +1,29 @@
+/* 전체 화면을 채우는 스타일 */
+body {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    margin: 0; /* 기본 마진 제거 */
+    background-color: #f0f0f0; /* 배경 색 */
+}
+
+/* 카드 크기 설정 */
+.card {
+    width: 200px; /* 카드의 너비 (원하는 크기로 조정) */
+    height: 300px; /* 카드의 높이 (원하는 크기로 조정) */
+    background-color: #04bfbf;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* 이미지가 카드 밖으로 나가지 않도록 */
+}
+
+/* 이미지 크기 설정 */
+img {
+    max-width: 100%; /* 이미지가 카드 너비를 넘지 않게 제한 */
+    max-height: 100%; /* 이미지가 카드 높이를 넘지 않게 제한 */
+    object-fit: contain; /* 이미지 비율 유지하며 크기 맞춤 */
+}

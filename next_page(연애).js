@@ -7,19 +7,19 @@ document.querySelectorAll('.card').forEach(card => {
     let targetPage = '';
     switch (cardId) {
       case '1':
-        targetPage = 'page1(취업).html'; // 카드 1 클릭 시 page1.html로 이동
+        targetPage = 'page1.html'; // 카드 1 클릭 시 page1.html로 이동
         break;
       case '2':
-        targetPage = 'page2(취업).html'; // 카드 2 클릭 시 page2.html로 이동
+        targetPage = 'page2.html'; // 카드 2 클릭 시 page2.html로 이동
         break;
       case '3':
-        targetPage = 'page3(취업).html'; // 카드 3 클릭 시 page3.html로 이동
+        targetPage = 'page3.html'; // 카드 3 클릭 시 page3.html로 이동
         break;
       case '4':
-        targetPage = 'page4(취업).html'; // 카드 4 클릭 시 page4.html로 이동
+        targetPage = 'page4.html'; // 카드 4 클릭 시 page4.html로 이동
         break;
       case '5':
-        targetPage = 'page5(취업).html'; // 카드 5 클릭 시 page5.html로 이동
+        targetPage = 'page5.html'; // 카드 5 클릭 시 page5.html로 이동
         break;
       default:
         targetPage = 'defaultPage.html'; // 기본 페이지
