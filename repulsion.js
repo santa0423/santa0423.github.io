@@ -39,7 +39,7 @@ $(function(){
         'click',
         function(){
             //$(this).fadeOut(500); // 클릭한 오브젝트를 페이드아웃 처리
-            window.open('http://dxdesign.kr', '_blank'); // 클릭 시 새 창으로 url(또는 파일) 열기
+            window.open('선택지 페이지(로또).html'); // 클릭 시 새 창으로 url(또는 파일) 열기
             //window.open('http://dxdesign.kr', '_self'); // 현재의 창에 열기
         }
     );
