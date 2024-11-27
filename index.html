@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="123.css">
   <title>메인페이지</title>
 </head>
 <body>
@@ -36,6 +36,15 @@
     <a href="날아다니며 커서 피하기.html">
       <img src="images/오늘의 운세-15.png" alt="Subfunction Image">
     </a>
+    <script>
+      blink();
+
+      function blink() {
+          $('#subfunction').animate({opacity: 1.0}, 500)
+              .delay(200)
+              .animate({opacity: 0.0}, 300, blink);
+      }
+  </script>
   </div>
 
   <div id="menu-container">

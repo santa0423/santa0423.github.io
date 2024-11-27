@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Cascadia';
-    src: url('/fonts/CascadiaMono-Regular.woff2') format('woff2'),
-         url('/fonts/CascadiaMono-Regular.woff') format('woff');
+    src: url('../santa0423.github.io/fonts/CascadiaCode_VTT.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,7 +42,12 @@ a, a:link, a:hover {
     max-width: 100%;         /* 이미지 크기 비율을 유지 */
     height: auto;           /* 비율에 맞게 높이 자동 조정 */
 }
+/* #floting letter */
+.flotingtext {
+    font-family: '여기어때잘난';
+    src: url('../santa0423.github.io/fonts/JalnanGothicTTF.ttf');
 
+}
 /* #topic: 상단 중앙 */
 #topic {
     display: flex;

@@ -7,6 +7,7 @@ const radiusX = 400; // X축 방향 반경
 let angle = 0; // 초기 각도
 const speed = 0.01; // 텍스트의 이동 속도
 
+
 // 자연스럽게 움직이는 텍스트 애니메이션
 function moveTexts() {
     floatingTexts.forEach((text, index) => {
@@ -114,13 +115,3 @@ $(function(){
         });
     });
 });
-
-// 깜빡이는 기능
-function blink() {
-    $('#subfunction').animate({opacity: 1.0}, 500)
-        .delay(200)
-        .animate({opacity: 0.0}, 300, blink);
-}
-
-// 깜빡이는 애니메이션 시작
-blink();
