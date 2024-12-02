@@ -95,11 +95,11 @@ floatingTexts.forEach(text => {
 moveTexts();
 
 // 메뉴 애니메이션 (GSAP 사용)
-let dy = 55; // 서브메뉴 하나 이동거리
+let dy = 65; // 서브메뉴 하나 이동거리
 $(function(){
     const menuHeight = 280; // 확장된 메뉴 높이
     const defaultHeight = 55; // 기본 메뉴 높이
-    const animationDuration = 0.1; // 애니메이션 속도
+    const animationDuration = 0.21; // 애니메이션 속도
 
     // 메뉴에 마우스를 올리면 펼쳐짐
     $('.menu').hover(function(){

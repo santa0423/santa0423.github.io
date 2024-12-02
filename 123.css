@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: url('images/KakaoTalk_20241105_003421151.jpg');
+    background-image: url('images/배경화면\ 컬러-04.png');
     background-size: cover;
     background-position: center;
 }
@@ -38,7 +38,7 @@ a, a:link, a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: antiquewhite;
+   /*background-color: antiquewhite;*/
 }
 
 #logo img {
@@ -90,6 +90,28 @@ a, a:link, a:hover {
     z-index: 9999;
 }
 
+#subfunction:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 #subfunction img {
     margin-left: auto;
     max-width: 100%;
@@ -100,9 +122,9 @@ a, a:link, a:hover {
     position: fixed;
     left: 50px;
     bottom: 50px;
-    width: 20%;
+    width: 22%;
     height: 100px;
-   /* background-color: aquamarine;*/
+  /*background-color: aquamarine;*/
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;

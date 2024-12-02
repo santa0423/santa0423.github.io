@@ -66,53 +66,106 @@ body {
     font-weight: bold;
     color: white;
     position: absolute;
+    opacity: 0;
+    transform: translate(0, 0);
     transform-origin: bottom center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s ease;
-    z-index: 1;
+    z-index: 0;
+    animation: moveCard 2s forwards;
+    transition: transform 5s ease-in-out, box-shadow 0.3s ease, filter 0.3s ease; /* Transition 시간 조정 */
 }
-.card:hover {
-  transform: translateY(-20px); /* 위로 20px 이동 */
-  box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
-  filter: brightness(1.5);
-}
-.card img{
+
+.card img {
     width: 100%;
 }
-/* Card Positions */
+
+/* 카드 애니메이션: 동시에 실행되도록 설정 */
+@keyframes moveCard {
+    0% {
+        opacity: 0;
+        transform: translate(0, 200px); /* 화면 아래에서 시작 */
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0); /* 카드가 정상 위치로 돌아옴 */
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Card Positions (카드들의 위치와 회전 설정) */
 #card-1 {
+    animation-delay: 0s;
     transform: rotate(-20deg) translateX(-350px) translateY(50px);
     z-index: 0;
 }
+
 #card-2 {
+    animation-delay: 0s; /* 동시에 실행 */
     transform: rotate(-10deg) translateX(-150px) translateY(30px);
     z-index: 1;
 }
+
 #card-3 {
+    animation-delay: 0s; /* 가운데 카드, 동시에 실행 */
     transform: rotate(0deg) translateY(0px);
     z-index: 2;
 }
+
 #card-4 {
+    animation-delay: 0s; /* 동시에 실행 */
     transform: rotate(10deg) translateX(150px) translateY(30px);
     z-index: 1;
 }
+
 #card-5 {
+    animation-delay: 0s; /* 동시에 실행 */
     transform: rotate(20deg) translateX(350px) translateY(50px);
     z-index: 0;
 }
 
-/* Card Hover Effect */
-.card:hover {
-    transform: translateY(-10px) scale(1.05); /* 카드가 살짝 위로 올라가며 크기가 커짐 */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.6); /* 그림자 효과 */
-    z-index: 10; /* 다른 카드들보다 위로 올라가도록 z-index 증가 */
+/* Hover 효과 수정: 천천히 위로 올라오도록 */
+#card-1:hover {
+    transform: translate(-350px, -80px); /* 천천히 위로 이동 */
+    box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+    filter: brightness(1.3);
+    z-index: 10; /* 카드 1을 가장 위로 */
 }
+
+#card-2:hover {
+    transform: translate(-150px, -80px); /* 천천히 위로 이동 */
+    box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+    filter: brightness(1.3);
+    z-index: 10; /* 카드 2를 가장 위로 */
+}
+
+#card-3:hover {
+    transform: translate(0px, -80px); /* 천천히 위로 이동 */
+    box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+    filter: brightness(1.3);
+    z-index: 10; /* 카드 3을 가장 위로 */
+}
+
+#card-4:hover {
+    transform: translate(150px, -80px); /* 천천히 위로 이동 */
+    box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+    filter: brightness(1.3);
+    z-index: 10; /* 카드 4을 가장 위로 */
+}
+
+#card-5:hover {
+    transform: translate(320px, -80px); /* 천천히 위로 이동 */
+    box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
+    filter: brightness(1.3);
+    z-index: 10; /* 카드 5를 가장 위로 */
+}
+
 #home {
     position: fixed;
     left: 50px;
     bottom: 45px;
     width: 100%;
     height: 55px;
-   /* background-color: aquamarine;*/
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -122,6 +175,7 @@ body {
     width: 6.5vw; 
     height: auto;
 }
+
 /* Responsiveness */
 @media (max-width: 600px) {
     .fortune-text h1 {
