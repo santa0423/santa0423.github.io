@@ -1,5 +1,5 @@
 // 텍스트 애니메이션
-const floatingTexts = document.querySelectorAll('.floating-text');
+const floatingTexts = document.querySelectorAll('.floating-text img');
 
 const radiusX = 400; // X축 방향 반경
 let angle = 0; // 초기 각도
