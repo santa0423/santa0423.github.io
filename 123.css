@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: url('images/배경화면\ 컬러-04.png');
+    background-image: url('images/배경화면\ 컬러FFFCE9-04.png');
     background-size: cover;
     background-position: center;
 }
@@ -54,6 +54,7 @@ a, a:link, a:hover {
 
 /* #topic: 상단 중앙 */
 #topic {
+    color: #9e6f6f;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -68,7 +69,9 @@ a, a:link, a:hover {
 }
 
 /* #subtopic: 로고 하단 */
+
 #subtopic {
+    color: #9e6f6f;
     display: flex;
     justify-content: center;
     align-items: center;

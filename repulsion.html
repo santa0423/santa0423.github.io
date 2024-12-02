@@ -3,35 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="repulsion.css">
-  <title>모기페이지</title>
+  <title>Text Orbit Animation</title>
 </head>
-
 <body>
     <div id="box">
         <div id="logo"><img src="images/풍선느낌 로고-06.png" alt="sub1"></div>
         <div id="subtopic">
-          <h2>날아다니는 모기를 잡아보세요.</h2>
-      </div>
+            <h2>날아다니는 모기를 잡아보세요.</h2>
+        </div>
     </div>
-  <div id="topic"><center>
-    <h1>“Things that seem just out of reach are eventually caught through effort and the passage of time, in one form or another.<br>
-      Even negative emotions eventually settle, unpredictable mosquitoes are finally caught, and uncertain weather clears to reveal the sun.<br>
-      Waiting for time to pass is a form of effort in itself, so don't focus solely on the outcome.”</h1></center>
+    
+    <div id="topic">
+        <center>
+          <h1>"Catching a mosquito that quickly flies around is not easy."</h1>
+        </center>
     </div>
-    <div id="home"><a href="index.html"><img src="images/홈-17.png"></div>
-    <div id="object1" class="repulsive"></div>
-    <div id="object2" class="repulsive"></div>
-    <div id="object3" class="repulsive"></div>
-    <div id="object4" class="repulsive"></div>
-    <div id="object5" class="repulsive"></div>
-    <div id="object6" class="repulsive"></div>
-    <div id="object7" class="repulsive"></div>
+    
+    <div id="home">
+        <a href="index.html"><img src="images/홈-17.png"></a>
+    </div>
+
+    <div id="floating-letter">
+        <div class="content-container">
+            <div class="floating-text" id="floatingText1">mosquito</div>
+            <div class="floating-text" id="floatingText2">lotto</div>
+            <div class="floating-text" id="floatingText3">love</div>
+            <div class="floating-text" id="floatingText4">employment</div>
+            <div class="floating-text" id="floatingText5">shopping</div>
+            <div class="floating-text" id="floatingText6">health</div>
+            <div class="floating-text" id="floatingText7">trash</div>
+        </div>
+    </div>
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/gsap.min.js"></script>
-    <script src="repulsion.js"></script>
+    <script src="repulsion2.js"></script> <!-- External JS for animation -->
 </body>
-    
 </html>

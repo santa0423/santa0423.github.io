@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Animation</title>
-    <link rel="stylesheet" href="w.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="w.css">
+  <title>Text Orbit Animation</title>
 </head>
 <body>
+    <div id="box">
+        <div id="logo"><img src="images/풍선느낌 로고-06.png" alt="sub1"></div>
+        <div id="subtopic">
+            <h2>날아다니는 모기를 잡아보세요.</h2>
+        </div>
+    </div>
+    
+    <div id="topic">
+        <center>
+            "Catching a mosquito that quickly flies around is not easy."
+        </center>
+    </div>
+    
+    <div id="home">
+        <a href="index.html"><img src="images/홈-17.png"></a>
+    </div>
 
-<div class="card-container">
-    <div class="card" id="card-1">1</div>
-    <div class="card" id="card-2">2</div>
-    <div class="card" id="card-3">3</div>
-    <div class="card" id="card-4">4</div>
-    <div class="card" id="card-5">5</div>
-</div>
+    <div id="floating-letter">
+        <div class="content-container">
+            <div class="floating-text" id="floatingText1">mosquito</div>
+            <div class="floating-text" id="floatingText2">lotto</div>
+            <div class="floating-text" id="floatingText3">love</div>
+            <div class="floating-text" id="floatingText4">employment</div>
+            <div class="floating-text" id="floatingText5">shopping</div>
+            <div class="floating-text" id="floatingText6">health</div>
+            <div class="floating-text" id="floatingText7">trash</div>
+        </div>
+    </div>
 
-<script src="wt.js"></script>
-
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="w.js"></script> <!-- External JS for animation -->
 </body>
 </html>

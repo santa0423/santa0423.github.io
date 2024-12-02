@@ -1,51 +1,52 @@
 @font-face {
-    font-family: 'Cascadia';
-    src: url('/fonts/CascadiaMono-Regular.woff2') format('woff2'),
-         url('/fonts/CascadiaMono-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Cascadia";
+    src: url("fonts/CascadiaCode_VTT.ttf") format("truetype");
 }
 
-* {
+@font-face {
+    font-family: "JalnanGodthicTTF";
+    src: url("fonts/JalnanGothicTTF.ttf") format("truetype");
+}
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     background-image: url('images/KakaoTalk_20241105_003421151.jpg');
     background-size: cover;
     background-position: center;
     font-family: 'Cascadia';
-}
-
-a, a:link, a:hover {
+  }
+  
+  a, a:link, a:hover {
     text-decoration: none;
     color: #000;
-}
-
-#box {
+  }
+  
+  #box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50vw;
-}
-
-#logo {
+  }
+  
+  #logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: antiquewhite;
-}
-
-#logo img {
+    /*background-color: antiquewhite;*/
+  }
+  
+  #logo img {
     max-width: 100%;
-    height: auto;
+    transform: translateY(-8%);
 }
-
-#topic {
+  
+  #topic {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -56,17 +57,20 @@ a, a:link, a:hover {
     transform: translateX(-50%);
     padding-top: 20px;
     font-size: 0.4vw;
-}
-
-#subtopic {
+    font-family: "Cascadia";
+  }
+  
+  #subtopic {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     width: 100%;
     font-size: 1vw;
-}
-
-#home {
+    font-family: "JalnanGodthicTTF";
+  }
+  
+  #home {
     position: fixed;
     left: 50px;
     bottom: 45px;
@@ -75,26 +79,39 @@ a, a:link, a:hover {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-}
-
-#home img {
+    z-index: 1000; /* z-index를 추가하여 다른 요소들 위에 표시되도록 */
+  }
+  
+  #home img {
     width: 6.5vw;
     height: auto;
-}
+  }
+  
+  
+  #floating-letter {
+    font-family: "JalnanGodthicTTF";
 
-.repulsive {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    border-style: solid;
-}
+  }
+  
+  .content-container {
+    font-size: .7vw;
+    text-align: center;
+    position: relative;
+  }
+  
+  .floating-text {
+    position: absolute;
+    color: #333;
+    font-weight: bold;
 
-#object1 { top: 200px; left: 200px; }
-#object2 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-#object3 { bottom: 200px; right: 200px; }
-#object4 { top: 200px; left: 200px; }
-#object5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-#object6 { bottom: 200px; right: 200px; }
-#object7 { bottom: 200px; right: 200px; }
+    transition: transform 0.1s ease-out;
+  }
+  
+  .floating-text:nth-child(odd) {
+    font-style: italic;
+  }
+  
+  .floating-text:nth-child(even) {
+    text-transform: uppercase;
+  }
+  
