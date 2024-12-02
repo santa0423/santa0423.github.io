@@ -141,6 +141,7 @@ function animateCircle() {
     menuCircle.style.backgroundColor = '#3498db';
     menuCircle.style.opacity = '1'; // 도형 보이게 설정
     menuCircle.style.pointerEvents = 'none'; // 클릭 방지
+    menuCircle.style.zIndex = '9999'; // 제일 위에 표시되도록 z-index 설정
 
     // 커짐 애니메이션
     setTimeout(() => {
