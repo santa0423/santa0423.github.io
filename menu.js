@@ -21,36 +21,48 @@ function moveTexts() {
                 startY = window.innerHeight * 0.2; // 위쪽
                 break;
             case 1:
-                startY = window.innerHeight * 0.4; // 중간 위쪽
+                startY = window.innerHeight * 0.276; // 중간 위쪽
                 break;
             case 2:
-                startY = window.innerHeight * 0.5; // 중앙
+                startY = window.innerHeight * 0.352; // 중앙
                 break;
             case 3:
-                startY = window.innerHeight * 0.6; // 중간 아래쪽
+                startY = window.innerHeight * 0.428; // 중간 아래쪽
                 break;
             case 4:
-                startY = window.innerHeight * 0.75; // 아래쪽
+                startY = window.innerHeight * 0.504; // 아래쪽
                 break;
+            case 5:
+                startY = window.innerHeight * 0.58; // 아래쪽
+                break;
+            case 6:
+                    startY = window.innerHeight * 0.656; // 아래쪽
+                    break;
         }
 
         // X 좌표 설정 (텍스트들이 좌, 중, 우로 다르게 배치되도록)
         let offsetX;
         switch (index) {
             case 0:
-                offsetX = -10; // 왼쪽
+                offsetX = -24; // 왼쪽
                 break;
             case 1:
-                offsetX = -50; // 중간 왼쪽
+                offsetX = -16; // 중간 왼쪽
                 break;
             case 2:
-                offsetX = 0; // 중앙
+                offsetX = -8; // 중앙
                 break;
             case 3:
-                offsetX = 50; // 중간 오른쪽
+                offsetX = 0; // 중간 오른쪽
                 break;
             case 4:
-                offsetX = 100; // 오른쪽
+                offsetX = 8; // 오른쪽
+                break;
+            case 5:
+                offsetX = 16; // 오른쪽
+                break;
+            case 6:
+                offsetX = 24 // 오른쪽
                 break;
         }
 

@@ -38,18 +38,18 @@ a, a:link, a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /*background-color: antiquewhite;*/
+    background-color: antiquewhite;
 }
 
 #logo img {
     max-width: 100%;
-    transform: translateY(-10%);
+    transform: translateY(-8%);
 }
 
 /* #floting text */
 .content-container {
     font-family: "JalnanGodthicTTF";
-    font-size: 0.5vw;
+    font-size: .7vw;
 }
 
 /* #topic: 상단 중앙 */

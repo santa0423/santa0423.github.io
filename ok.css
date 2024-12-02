@@ -21,10 +21,10 @@ body {
 .fortune-text {
   color: white;
   text-align: center;
-  margin-bottom: 50px; /* Adjusted spacing */
+  margin-bottom: 10px; /* Adjusted spacing */
   opacity: 1;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  margin-top: 50px; /* Adjusted spacing */
+  margin-top: 60px; /* Adjusted spacing */
 }
 
 .fortune-text.hidden {
@@ -65,7 +65,7 @@ body {
   align-items: center;
   width: 70mm;
   height: 120mm;
-  background-color: #04bfbf;
+  /*background-color: #04bfbf;*/
   color: white;
   border-radius: 10px;
   font-size: 24px;
@@ -82,7 +82,7 @@ body {
 .card:hover {
   transform: translateY(-20px);
   box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.6);
-  filter: brightness(1.5);
+  filter: brightness(1.3);
 }
 
 /* Card Title Styling */
@@ -177,8 +177,8 @@ body {
   }
 
   .card {
-    width: 50mm; /* Smaller card size */
-    height: 80mm; /* Smaller card height */
+    width: 30mm; /* Smaller card size */
+    height: 53mm; /* Smaller card height */
     font-size: 18px; /* Smaller text on cards */
   }
 
