@@ -38,8 +38,10 @@
     <a href="날아다니며 커서 피하기.html">
       <img src="images/오늘의 운세-15.png" alt="Subfunction Image">
     </a>
-
   </div>
+
+  <!-- 메뉴 가운데에 도형 -->
+  <div id="menu-circle"></div>
 
   <div id="menu-container">
     <div id="menu1" class="menu">
@@ -52,7 +54,7 @@
       </div>
     </div>
     <div id="menu2" class="menu">
-      <div class="submenu"><a href="#"><a href="Lotto.html"><img src="images/lotto.png" alt="sub1"></a></div>
+      <div class="submenu"><img src="images/lotto.png" alt="sub1"></a></div>
       <div class="submenu"><a href="#"><img src="images/health.png" alt="sub2"></a></div>
       <div class="submenu"><a href="#"><img src="images/environment.png" alt="sub3"></a></div>
       <div class="submenu"><a href="#"><img src="images/appearance.png" alt="sub4"></a></div>
@@ -74,5 +76,59 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="menu.js"></script>
+
+  <script>
+    // 도형 애니메이션 추가
+    const menuCircle = document.getElementById('menu-circle');
+    const menuItems = document.querySelectorAll('.menu');
+
+    // 도형 애니메이션 실행
+    function animateCircle() {
+        // 도형의 초기 설정
+        menuCircle.style.position = 'absolute';
+        menuCircle.style.top = '50%';
+        menuCircle.style.left = '50%';
+        menuCircle.style.transform = 'translate(-50%, -50%)'; // 중앙에 위치
+        menuCircle.style.width = '50px';
+        menuCircle.style.height = '50px';
+        menuCircle.style.borderRadius = '50%';
+        menuCircle.style.backgroundColor = '#DE8CF2';
+        menuCircle.style.opacity = '1'; // 도형 보이게 설정
+
+        // 커짐 애니메이션
+        setTimeout(() => {
+            menuCircle.style.transition = 'all 0.6s ease'; // 커짐
+            menuCircle.style.width = '200px';
+            menuCircle.style.height = '200px';
+        }, 100);
+
+        // 작아짐 후 커짐
+        setTimeout(() => {
+            menuCircle.style.transition = 'all 0.5s ease';
+            menuCircle.style.width = '80px';
+            menuCircle.style.height = '80px';
+        }, 600);
+
+        // 화면 가득 채우기
+        setTimeout(() => {
+            menuCircle.style.transition = 'all 1s ease';
+            menuCircle.style.width = '100vw';
+            menuCircle.style.height = '100vh';
+            menuCircle.style.borderRadius = '0';
+        }, 1000);
+        
+        // 애니메이션 끝나고 페이지 이동
+        setTimeout(() => {
+            window.location.href = 'Lotto.html'; // 페이지 이동
+        }, 2100);
+    }
+
+    // 메뉴 클릭 시 애니메이션 시작
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            animateCircle();
+        });
+    });
+  </script>
 </body>
 </html>

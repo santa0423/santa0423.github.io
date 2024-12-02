@@ -1,6 +1,4 @@
 // 텍스트 애니메이션
-const roundedCursor = document.querySelector('.cursor.rounded');
-const pointedCursor = document.querySelector('.cursor.pointed');
 const floatingTexts = document.querySelectorAll('.floating-text'); 
 
 const radiusX = 400; // X축 방향 반경
@@ -10,11 +8,9 @@ const speed = 0.01; // 텍스트의 이동 속도
 // 자연스럽게 움직이는 텍스트 애니메이션
 function moveTexts() {
     floatingTexts.forEach((text, index) => {
-        // 화면 중앙을 기준으로 텍스트 위치 계산
         const centerX = window.innerWidth / 2;  // 화면 중앙 X 좌표
         const centerY = window.innerHeight / 2; // 화면 중앙 Y 좌표
 
-        // Y 좌표 설정 (각 텍스트 위치를 다르게 설정)
         let startY;
         switch (index) {
             case 0:
@@ -36,11 +32,10 @@ function moveTexts() {
                 startY = window.innerHeight * 0.58; // 아래쪽
                 break;
             case 6:
-                    startY = window.innerHeight * 0.656; // 아래쪽
-                    break;
+                startY = window.innerHeight * 0.656; // 아래쪽
+                break;
         }
 
-        // X 좌표 설정 (텍스트들이 좌, 중, 우로 다르게 배치되도록)
         let offsetX;
         switch (index) {
             case 0:
@@ -66,27 +61,21 @@ function moveTexts() {
                 break;
         }
 
-        // X, Y 좌표 계산
         const x = centerX + radiusX * Math.cos(angle + index * (Math.PI / 2)) + offsetX;
         const y = startY;
 
         text.style.left = `${x}px`;
         text.style.top = `${y}px`;
 
-        // 텍스트의 회전 각도 설정 (Y축으로 회전)
         const rotationAngle = (angle + index * (Math.PI / 10)) * (180 / Math.PI); // 각도 계산 (도 단위)
         text.style.transform = `rotateY(${rotationAngle}deg)`; // Y축 회전
-
     });
 
-    // 각도 증가 (속도 조정)
     angle += speed;
 
-    // 애니메이션 계속 호출
     requestAnimationFrame(moveTexts);
 }
 
-// 초기 위치 설정 (floatingTexts들을 절대 위치로 설정)
 floatingTexts.forEach(text => {
     text.style.position = 'absolute'; // 절대 위치 설정
 });
@@ -136,3 +125,53 @@ function blink() {
 
 // 깜빡이는 애니메이션 시작
 blink();
+
+// 도형 (원) 애니메이션
+function animateCircle() {
+    const menuCircle = document.getElementById('menu-circle');
+
+    // 도형 초기 설정
+    menuCircle.style.position = 'absolute';
+    menuCircle.style.top = '50%';
+    menuCircle.style.left = '50%';
+    menuCircle.style.transform = 'translate(-50%, -50%)'; // 중앙에 위치
+    menuCircle.style.width = '50px'; // 초기 크기
+    menuCircle.style.height = '50px';
+    menuCircle.style.borderRadius = '50%';
+    menuCircle.style.backgroundColor = '#3498db';
+    menuCircle.style.opacity = '1'; // 도형 보이게 설정
+    menuCircle.style.pointerEvents = 'none'; // 클릭 방지
+
+    // 커짐 애니메이션
+    setTimeout(() => {
+        menuCircle.style.transition = 'all 0.4s ease'; // 커짐
+        menuCircle.style.width = '200px';
+        menuCircle.style.height = '200px';
+    }, 100);
+
+    // 작아짐 후 커짐
+    setTimeout(() => {
+        menuCircle.style.transition = 'all 0.s ease';
+        menuCircle.style.width = '80px';
+        menuCircle.style.height = '80px';
+    }, 600);
+
+    // 화면 가득 채우기
+    setTimeout(() => {
+        menuCircle.style.transition = 'all .2s ease';
+        menuCircle.style.width = '100vw'; // 화면 전체 너비
+        menuCircle.style.height = '100vh'; // 화면 전체 높이
+        menuCircle.style.borderRadius = '0'; // 둥근 모서리 없애기
+    }, 1000);
+
+    // 화면을 가득 채운 후, 페이지 이동
+    setTimeout(() => {
+        window.location.href = 'Lotto.html'; // 페이지 이동
+    }, 2100); // 화면이 꽉 찬 뒤 1초 후에 페이지 이동
+}
+
+// 메뉴 클릭 시 애니메이션 시작
+document.getElementById('menu-item').addEventListener('click', (event) => {
+    event.preventDefault(); // 링크 기본 동작을 막음 (페이지 이동 막기)
+    animateCircle(); // 애니메이션 시작
+});
