@@ -5,8 +5,8 @@ const radiusX = 400; // X축 방향 반경
 let angle = 0; // 초기 각도
 const speed = 0.01; // 텍스트의 이동 속도
 const avoidanceRadius = 150; // 마우스를 피할 범위 (더 가까워졌을 때 피하도록 설정)
-const maxAvoidanceDistance = 400; // 마우스를 피할 최대 거리 (더 멀리 피하도록 설정)
-const avoidanceStrength = 0.6; // 마우스를 피할 강도 (값을 키워서 피하는 범위와 강도를 더 키움)
+const maxAvoidanceDistance = 200; // 마우스를 피할 최대 거리 (더 멀리 피하도록 설정)
+const avoidanceStrength = 0.5; // 마우스를 피할 강도 (값을 키워서 피하는 범위와 강도를 더 키움)
 const randomnessFactor = 0.05; // 비정상적인 움직임을 추가할 강도 (자연스러움을 유지하기 위해 낮게 설정)
 const easeFactor = 0.1; // 텍스트가 원래 궤도로 돌아가는 부드러운 강도
 
@@ -24,7 +24,7 @@ document.addEventListener('mousemove', (event) => {
 const targetPage = '선택지 페이지(로또).html'; // 클릭 시 이동할 페이지
 
 // 텍스트 클릭 시 다른 페이지로 이동
-repulsive.forEach((text, index) => {
+floatingTexts.forEach((text, index) => {
     text.addEventListener('click', () => {
         window.location.href = targetPage; // 클릭하면 '선택지 페이지(로또).html'로 이동
     });
@@ -32,7 +32,7 @@ repulsive.forEach((text, index) => {
 
 // 자연스럽게 움직이는 텍스트 애니메이션
 function moveTexts() {
-    repulsive.forEach((text, index) => {
+    floatingTexts.forEach((text, index) => {
         // 화면 중앙을 기준으로 텍스트 위치 계산
         const centerX = window.innerWidth / 2;  // 화면 중앙 X 좌표
         const centerY = window.innerHeight / 2; // 화면 중앙 Y 좌표
@@ -138,7 +138,7 @@ function moveTexts() {
 }
 
 // 초기 위치 설정 (floatingTexts들을 절대 위치로 설정)
-repulsive.forEach(text => {
+floatingTexts.forEach(text => {
     text.style.position = 'absolute'; // 절대 위치 설정
 });
 
