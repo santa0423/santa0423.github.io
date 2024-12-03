@@ -7,11 +7,13 @@
 
 /* Body Styling */
 body {
-  background-color: #333;
+  background-image: url('images/운세배경컬러-07.png');
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   font-family: Arial, sans-serif;
   overflow: hidden; /* 페이지 스크롤 막기 */
@@ -181,7 +183,27 @@ body {
   width: 6.5vw;
   height: auto;
 }
+#home:hover {
+  animation: bounce 0.5s ease;
+}
 
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  30% {
+      transform: translateY(-20px);
+  }
+  50% {
+      transform: translateY(0);
+  }
+  70% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   .fortune-text {

@@ -29,7 +29,12 @@ window.onload = function() {
     document.body.style.pointerEvents = 'auto';  // 클릭 및 드래그를 다시 허용
   }, 2000); // 1초 후에 pointer-events를 auto로 설정
 };
-
+// 깜빡이는 기능
+function blink() {
+  $('#home').animate({opacity: 1.0}, 500)
+      .delay(600)
+      .animate({opacity: 0.0}, 300, blink);
+}
 function selectCard(cardId) { 
   const allCards = document.querySelectorAll('.card');
   const selectedCard = document.getElementById(`card-${cardId}`);
