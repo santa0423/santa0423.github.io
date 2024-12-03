@@ -21,7 +21,7 @@ document.addEventListener('mousemove', (event) => {
 });
 
 // 텍스트 클릭 시 이동할 페이지 링크 설정
-const targetPage = '선택지 페이지(로또).html'; // 클릭 시 이동할 페이지
+const targetPage = 'w.html'; // 클릭 시 이동할 페이지
 
 // 텍스트 클릭 시 다른 페이지로 이동
 floatingTexts.forEach((text, index) => {
