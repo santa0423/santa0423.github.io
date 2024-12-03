@@ -119,60 +119,62 @@ $(function(){
 // 깜빡이는 기능
 function blink() {
     $('#subfunction').animate({opacity: 1.0}, 500)
-        .delay(200)
+        .delay(600)
         .animate({opacity: 0.0}, 300, blink);
 }
 
 // 깜빡이는 애니메이션 시작
 blink();
 
-// 도형 (원) 애니메이션
-function animateCircle() {
+    // 도형 애니메이션 추가
     const menuCircle = document.getElementById('menu-circle');
+    const menuItems = document.querySelectorAll('.menu');
 
-    // 도형 초기 설정
-    menuCircle.style.position = 'absolute';
-    menuCircle.style.top = '50%';
-    menuCircle.style.left = '50%';
-    menuCircle.style.transform = 'translate(-50%, -50%)'; // 중앙에 위치
-    menuCircle.style.width = '50px'; // 초기 크기
-    menuCircle.style.height = '50px';
-    menuCircle.style.borderRadius = '50%';
-    menuCircle.style.backgroundColor = '#3498db';
-    menuCircle.style.opacity = '1'; // 도형 보이게 설정
-    menuCircle.style.pointerEvents = 'none'; // 클릭 방지
-    menuCircle.style.zIndex = '9999'; // 제일 위에 표시되도록 z-index 설정
+    // 도형 애니메이션 실행
+    function animateCircle() {
+        // 도형의 초기 설정
+        menuCircle.style.position = 'absolute';
+        menuCircle.style.top = '50%';
+        menuCircle.style.left = '50%';
+        menuCircle.style.transform = 'translate(-50%, -50%)'; // 중앙에 위치
+        menuCircle.style.width = '50px';
+        menuCircle.style.height = '50px';
+        menuCircle.style.borderRadius = '50%';
+        menuCircle.style.backgroundColor = '#DE8CF2';
+        menuCircle.style.opacity = '1'; // 도형 보이게 설정
+        menuCircle.style.zIndex = '9999'; // 제일 위에 표시되도록 z-index 설정
 
-    // 커짐 애니메이션
-    setTimeout(() => {
-        menuCircle.style.transition = 'all 0.4s ease'; // 커짐
-        menuCircle.style.width = '200px';
-        menuCircle.style.height = '200px';
-    }, 100);
+        // 커짐 애니메이션
+        setTimeout(() => {
+            menuCircle.style.transition = 'all 0.6s ease'; // 커짐
+            menuCircle.style.width = '200px';
+            menuCircle.style.height = '200px';
+        }, 100);
 
-    // 작아짐 후 커짐
-    setTimeout(() => {
-        menuCircle.style.transition = 'all 0.s ease';
-        menuCircle.style.width = '80px';
-        menuCircle.style.height = '80px';
-    }, 600);
+        // 작아짐 후 커짐
+        setTimeout(() => {
+            menuCircle.style.transition = 'all 0.5s ease';
+            menuCircle.style.width = '80px';
+            menuCircle.style.height = '80px';
+        }, 600);
 
-    // 화면 가득 채우기
-    setTimeout(() => {
-        menuCircle.style.transition = 'all .2s ease';
-        menuCircle.style.width = '100vw'; // 화면 전체 너비
-        menuCircle.style.height = '100vh'; // 화면 전체 높이
-        menuCircle.style.borderRadius = '0'; // 둥근 모서리 없애기
-    }, 1000);
+        // 화면 가득 채우기
+        setTimeout(() => {
+            menuCircle.style.transition = 'all 1s ease';
+            menuCircle.style.width = '100vw';
+            menuCircle.style.height = '100vh';
+            menuCircle.style.borderRadius = '0';
+        }, 1000);
+        
+        // 애니메이션 끝나고 페이지 이동
+        setTimeout(() => {
+            window.location.href = 'Lotto.html'; // 페이지 이동
+        }, 2100);
+    }
 
-    // 화면을 가득 채운 후, 페이지 이동
-    setTimeout(() => {
-        window.location.href = 'Lotto.html'; // 페이지 이동
-    }, 2100); // 화면이 꽉 찬 뒤 1초 후에 페이지 이동
-}
-
-// 메뉴 클릭 시 애니메이션 시작
-document.getElementById('menu-item').addEventListener('click', (event) => {
-    event.preventDefault(); // 링크 기본 동작을 막음 (페이지 이동 막기)
-    animateCircle(); // 애니메이션 시작
-});
+    // 메뉴 클릭 시 애니메이션 시작
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            animateCircle();
+        });
+    });
