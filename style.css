@@ -18,11 +18,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url('images/카테고리-28.svg')8 8, auto; /* 핫스팟을 이미지 중앙으로 설정 */
+  cursor: url('images/카테고리-30.svg')8 8, auto; /* 핫스팟을 이미지 중앙으로 설정 */
 }
 
 *:active {
-  cursor: url('images/카테고리-29.svg')8 8, auto; /* 클릭 시 커서 이미지 변경 */
+  cursor: url('images/카테고리-31.svg')8 8, auto; /* 클릭 시 커서 이미지 변경 */
 }
 
 
