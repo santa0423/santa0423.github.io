@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커서 이미지 변경</title>
+  <style>
+    /* 기본 커서 이미지 */
+    body {
+      cursor: url('images/appearance.png'), auto;
+    }
+
+    /* 클릭 시 바뀔 커서 이미지 */
+    .clicked {
+      cursor: url('https://example.com/clicked-cursor.png'), auto;
+    }
+
+    /* 예시용 클릭 가능한 영역 */
+    .clickable-area {
+      width: 100%;
+      height: 100vh;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      text-align: center;
+      border: 2px dashed #ccc;
+      cursor: url('https://example.com/default-cursor.png'), auto; /* 클릭 가능한 영역에서 기본 커서 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="clickable-area" id="clickableArea">
+    클릭하여 커서를 변경해 보세요!
+  </div>
+
+  <script>
+    const clickableArea = document.getElementById('clickableArea');
+
+    clickableArea.addEventListener('click', function () {
+      // 클릭 시 body에 clicked 클래스를 추가하거나 제거
+      document.body.classList.toggle('clicked');
+    });
+  </script>
+
+</body>
+</html>

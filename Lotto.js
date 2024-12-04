@@ -144,3 +144,5 @@ floatingTexts.forEach(text => {
 
 // 애니메이션 시작
 moveTexts();
+
+

@@ -141,3 +141,20 @@
     text-transform: uppercase;
   }
   
+  #object2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 화면 가운데 정렬 */
+    width: 0; /* 초기 크기 0 */
+    height: 0; /* 초기 크기 0 */
+    background-color: rgba(255, 0, 0, 0.5); /* 배경색 */
+    border-radius: 50%; /* 원형 */
+    z-index: 9999; /* 다른 요소들 위에 */
+    transition: all 1s ease; /* 부드럽게 애니메이션 */
+}
+
+
+
+
+

@@ -13,16 +13,26 @@
   src: url("fonts/DungGeunMo.ttf") format("truetype");
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: url('images/카테고리-28.svg')8 8, auto; /* 핫스팟을 이미지 중앙으로 설정 */
 }
+
+*:active {
+  cursor: url('images/카테고리-29.svg')8 8, auto; /* 클릭 시 커서 이미지 변경 */
+}
+
+
+
 
 body {
   background-image: url('images/배경화면\ 컬러FFFCE9-04.png');
   background-size: cover;
   background-position: center;
+  overflow: hidden; /* 페이지 스크롤 막기 */
 }
 
 a, a:link, a:hover {
@@ -160,7 +170,35 @@ a, a:link, a:hover {
   vertical-align: bottom;
 }
 
-.submenu {
+/*daily*/
+.submenu1-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu1-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu1-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu1-4 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -170,7 +208,120 @@ a, a:link, a:hover {
   align-items: flex-end;
 }
 
-.submenu img {
+/*worry*/
+.submenu2-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu2-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu2-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu2-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+/*relationship*/
+.submenu3-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu3-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu3-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.submenu3-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+a, a:link, a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+#object1 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:0px;
+  height: 0px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  z-index: 9999;
+}
+/*
+#object2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:0px;
+  height: 0px;
+  background-color: #fff;
+  border-radius: 50%;
+
+}*/
+
+
+.menu img {
   width: 100%;
   vertical-align: bottom;
 }
