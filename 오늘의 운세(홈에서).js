@@ -29,12 +29,7 @@ window.onload = function() {
     document.body.style.pointerEvents = 'auto';  // 클릭 및 드래그를 다시 허용
   }, 2000); // 1초 후에 pointer-events를 auto로 설정
 };
-// 깜빡이는 기능
-function blink() {
-  $('#home').animate({opacity: 1.0}, 500)
-      .delay(600)
-      .animate({opacity: 0.0}, 300, blink);
-}
+
 function selectCard(cardId) { 
   const allCards = document.querySelectorAll('.card');
   const selectedCard = document.getElementById(`card-${cardId}`);
@@ -63,11 +58,11 @@ function selectCard(cardId) {
   setTimeout(() => {
     // 각 카드에 따라 다른 페이지로 이동
     if (cardId === 1) {
-      window.location.href = "취업 페이지.html"; // 카드 1 클릭 시 취업 페이지로 이동
+      window.location.href = "취업(운세 페이지에서).html"; // 카드 1 클릭 시 취업 페이지로 이동
     } else if (cardId === 2) {
-      window.location.href = "연애 페이지.html"; // 카드 2 클릭 시 연애 페이지로 이동
+      window.location.href = "연애(운세 페이지에서).html"; // 카드 2 클릭 시 연애 페이지로 이동
     } else if (cardId === 3) {
-      window.location.href = "재물 페이지.html"; // 카드 3 클릭 시 재물 페이지로 이동
+      window.location.href = "재물(운세 페이지에서).html"; // 카드 3 클릭 시 재물 페이지로 이동
     }
 
     document.body.style.overflow = 'auto'; // 전환 후 스크롤 재활성화
