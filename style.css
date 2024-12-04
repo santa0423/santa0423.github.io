@@ -8,6 +8,11 @@
   src: url("fonts/JalnanGothicTTF.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "DungGeunMoTTF";
+  src: url("fonts/DungGeunMo.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,8 +53,9 @@ a, a:link, a:hover {
 
 /* #floting text */
 .content-container {
-  font-family: "JalnanGodthicTTF";
-  font-size: .7vw;
+  font-family: "DungGeunMoTTF";
+  font-weight: bold;
+  font-size: .9vw;
 }
 
 /* #topic: 상단 중앙 */

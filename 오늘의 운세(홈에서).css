@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "DungGeunMoTTF";
+  src: url("fonts/DungGeunMo.ttf") format("truetype");
+}
+
 /* Global Reset */
 * {
     margin: 0;
@@ -15,7 +20,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: "DungGeunMoTTF";
     overflow: hidden; /* 페이지 스크롤 막기 */
     pointer-events: none; /* 클릭 방지 */
     user-select: none; /* 텍스트 드래그 방지 */
@@ -38,6 +43,7 @@
   }
   
   .fortune-text h1 {
+    font-weight: normal;
     font-size: 36px;
     margin-bottom: 10px;
   }
@@ -177,6 +183,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    z-index: 10000;
   }
   
   #home img {

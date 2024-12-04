@@ -1,14 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
-  // 페이지가 로드된 후 카드들이 순차적으로 보이도록 설정
-  setTimeout(() => document.getElementById('card-1').classList.add('show'), 200);
-  setTimeout(() => document.getElementById('card-2').classList.add('show'), 300);
-  setTimeout(() => document.getElementById('card-3').classList.add('show'), 400);
-  setTimeout(() => document.getElementById('card-4').classList.add('show'), 500);
-  setTimeout(() => document.getElementById('card-5').classList.add('show'), 600);
-});
-
-
-
+// 카드별로 다른 페이지로 이동하도록 설정
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', () => {
     const cardId = card.id.split('-')[1];

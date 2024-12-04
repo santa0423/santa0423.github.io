@@ -1,14 +1,22 @@
+@font-face {
+    font-family: "DungGeunMoTTF";
+    src: url("fonts/DungGeunMo.ttf") format("truetype");
+  }
+  
 /* Body Styling */
 body {
-    background-color: #333;
-    font-family: Arial, sans-serif;
+    background-image: url('images/운세배경컬러-07.png');
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    overflow: hidden; /* Prevent scrolling */
-    margin: 0;
+    font-family: "DungGeunMoTTF";
+    overflow: hidden; /* 페이지 스크롤 막기 */
+
+    user-select: none; /* 텍스트 드래그 방지 */
 }
 
 /* Content Container */
@@ -31,6 +39,7 @@ body {
 }
 
 .fortune-text h1 {
+    font-weight: normal;
     padding-top: 50px;
     font-size: 36px;
     margin-bottom: 10px;
@@ -175,7 +184,27 @@ body {
     width: 6.5vw; 
     height: auto;
 }
-
+#home:hover {
+    animation: bounce 0.5s ease;
+  }
+  
+  @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
 /* Responsiveness */
 @media (max-width: 600px) {
     .fortune-text h1 {

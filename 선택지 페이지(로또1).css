@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "DungGeunMoTTF";
+    src: url("fonts/DungGeunMo.ttf") format("truetype");
+  }
+  
 /* body 요소에 기본 margin을 제거하고 화면 크기를 100%로 설정 */
 body {
     overflow: hidden; /* 스크롤 막기 */
