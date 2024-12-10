@@ -35,10 +35,6 @@ body {
   overflow: hidden; /* 페이지 스크롤 막기 */
 }
 
-a, a:link, a:hover {
-  text-decoration: none;
-  color: #000;
-}
 
 #box {
   position: absolute;
@@ -291,9 +287,6 @@ a, a:link, a:hover {
 }
 
 #object1 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -302,13 +295,10 @@ a, a:link, a:hover {
   height: 0px;
   background-color: blueviolet;
   border-radius: 50%;
-  z-index: 9999;
+
 }
-/*
+
 #object2 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -317,24 +307,10 @@ a, a:link, a:hover {
   height: 0px;
   background-color: #fff;
   border-radius: 50%;
-
-}*/
+}
 
 
 .menu img {
   width: 100%;
   vertical-align: bottom;
-}
-#menu-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0; /* 처음에는 보이지 않게 설정 */
-  height: 0;
-  border-radius: 50%;
-  background-color: #3498db;
-  opacity: 0; /* 처음에는 보이지 않음 */
-  z-index: 9999;
-  pointer-events: none; /* 클릭 방지 */
 }

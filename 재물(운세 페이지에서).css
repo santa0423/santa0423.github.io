@@ -15,7 +15,6 @@ body {
     height: 100vh;
     font-family: "DungGeunMoTTF";
     overflow: hidden; /* 페이지 스크롤 막기 */
-
     user-select: none; /* 텍스트 드래그 방지 */
 }
 

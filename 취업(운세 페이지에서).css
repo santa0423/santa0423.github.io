@@ -3,6 +3,19 @@
     src: url("fonts/DungGeunMo.ttf") format("truetype");
   }
   
+ /* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url('images/카테고리-30.svg')8 8, auto; /* 핫스팟을 이미지 중앙으로 설정 */
+  }
+  
+  *:active {
+    cursor: url('images/카테고리-31.svg')8 8, auto; /* 클릭 시 커서 이미지 변경 */
+  }
+  
+  
 /* Body Styling */
 body {
     background-image: url('images/운세배경컬러-07.png');
@@ -15,6 +28,7 @@ body {
     height: 100vh;
     font-family: "DungGeunMoTTF";
     overflow: hidden; /* 페이지 스크롤 막기 */
+    pointer-events: none; /* 클릭 방지 */
     user-select: none; /* 텍스트 드래그 방지 */
 }
 
