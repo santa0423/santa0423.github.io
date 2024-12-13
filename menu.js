@@ -1,38 +1,38 @@
 // 텍스트 애니메이션
 const floatingTexts = document.querySelectorAll('.floating-text'); 
 
-const radiusX = 400; // X축 방향 반경
-let angle = 0; // 초기 각도
-const speed = 0.01; // 텍스트의 이동 속도
+const radiusX = 400; 
+let angle = 0;
+const speed = 0.01; 
 
-// 자연스럽게 움직이는 텍스트 애니메이션
+
 function moveTexts() {
     floatingTexts.forEach((text, index) => {
-        const centerX = window.innerWidth / 2;  // 화면 중앙 X 좌표
-        const centerY = window.innerHeight / 2; // 화면 중앙 Y 좌표
+        const centerX = window.innerWidth / 2; 
+        const centerY = window.innerHeight / 2;
 
         let startY;
         switch (index) {
             case 0:
-                startY = window.innerHeight * 0.2; // 위쪽
+                startY = window.innerHeight * 0.2; 
                 break;
             case 1:
-                startY = window.innerHeight * 0.276; // 중간 위쪽
+                startY = window.innerHeight * 0.276;
                 break;
             case 2:
-                startY = window.innerHeight * 0.352; // 중앙
+                startY = window.innerHeight * 0.352;
                 break;
             case 3:
-                startY = window.innerHeight * 0.428; // 중간 아래쪽
+                startY = window.innerHeight * 0.428; 
                 break;
             case 4:
-                startY = window.innerHeight * 0.504; // 아래쪽
+                startY = window.innerHeight * 0.504; 
                 break;
             case 5:
-                startY = window.innerHeight * 0.58; // 아래쪽
+                startY = window.innerHeight * 0.58; 
                 break;
             case 6:
-                startY = window.innerHeight * 0.656; // 아래쪽
+                startY = window.innerHeight * 0.656; 
                 break;
         }
 

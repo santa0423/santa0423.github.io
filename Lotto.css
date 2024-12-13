@@ -12,11 +12,11 @@
   
   margin: 0;
   padding: 0;
-  cursor: url('images/카테고리-30.svg')8 8, auto; /* 핫스팟을 이미지 중앙으로 설정 */
+  cursor: url('images/카테고리-30.svg')8 8, auto;
 }
 
 *:active {
-  cursor: url('images/카테고리-31.svg')8 8, auto; /* 클릭 시 커서 이미지 변경 */
+  cursor: url('images/카테고리-31.svg')8 8, auto;
 }
 
 #all{
@@ -98,7 +98,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    z-index: 1000; /* z-index를 추가하여 다른 요소들 위에 표시되도록 */
+    z-index: 1000;
   }
   
   #home img {
@@ -162,13 +162,13 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 화면 가운데 정렬 */
-    width: 0; /* 초기 크기 0 */
-    height: 0; /* 초기 크기 0 */
-    background-color: rgba(255, 0, 0, 0.5); /* 배경색 */
-    border-radius: 50%; /* 원형 */
-    z-index: 9999; /* 다른 요소들 위에 */
-    transition: all 1s ease; /* 부드럽게 애니메이션 */
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0; 
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 9999;
+    transition: all 1s ease;
 }
 
 
