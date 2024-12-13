@@ -23,7 +23,7 @@
   }
   
   body {
-    animation: clip-animation 1s;
+    animation: clip-animation 2s;
     background-color: #8fd783; /* 박스 배경 색상 */
   }
   #all{
