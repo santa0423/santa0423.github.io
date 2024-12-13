@@ -19,10 +19,6 @@
   cursor: url('images/카테고리-31.svg')8 8, auto; /* 클릭 시 커서 이미지 변경 */
 }
 
-body {
-  animation: clip-animation 1s;
-  background-color: #8fd783; /* 박스 배경 색상 */
-}
 #all{
   font-family: "DungGeunMoTTF";
   background-image: url('images/배경화면\ 컬러-05.png');
@@ -38,6 +34,7 @@ body {
 }
   
   body {
+    animation: clip-animation 1s;
     background-color: #de8cf2;
   }
   
