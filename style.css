@@ -31,20 +31,18 @@
 
 
 body {
-  padding: 0; margin: 0;
-  width: 100vw; height: 100vh;
-  animation: clip-animation 1s;
+
 }
 
 #all{
   background-image: url('images/배경화면\ 컬러FFFCE9-04.png');
   padding: 0; margin: 0;
   width: 100vw; height: 100vh;
-  animation: clip-animation 3s;
   background-size: cover;
   background-position: center;
   overflow: hidden; /* 페이지 스크롤 막기 */
 }
+
 
 #box {
   position: absolute;
@@ -317,7 +315,19 @@ a, a:link, a:hover {
   transform: translate(-50%, -50%);
   width:0px;
   height: 0px;
-  background-color: #fff;
+  background-color: #94e077;
+
+  border-radius: 50%;
+}
+
+#object3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:0px;
+  height: 0px;
+  background-color: #8bbff2;
   border-radius: 50%;
 }
 

@@ -18,25 +18,33 @@
   cursor: url('images/카테고리-31.svg')8 8, auto;
 }
 
-
-
-
 body {
-  background-size: cover;
-  overflow: hidden;
+  animation: clip-animation 1s;
 }
 
-    body {
-          background-image: url('images/background.jpg');
+#all{
+  background-image: url('images/background.jpg');
       display: flex;
       justify-content: center;
       align-items: center; 
       height: 100vh; 
       margin: 0;
-    }
+}
+ @keyframes clip-animation {
+  0% { clip-path: circle(0% at 50% 50%); }
+  100% { clip-path: circle(100% at 50% 50%); }
+}
+
+
+body {
+  background-size: cover;
+  overflow: hidden;
+  background-color: coral;
+}
+
   </style>
-</head>
+</head><div id="all">
 <body>
-  <img src="images/공사중-03.png" alt="이미지" width="500"> 
+  <img src="images/공사중-03.png" alt="이미지" width="500"> </div>
 </body>
 </html>
