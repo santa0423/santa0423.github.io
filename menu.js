@@ -324,3 +324,15 @@ $('.submenu3-4').on('click', function(){
     }
 );
 });
+$('#subfunction').on('click', function(){
+    console.log('clicked...');
+    $('#object4').animate({
+        width: 10000,
+        height:10000
+    }, 
+    700, // 애니메이션 시간
+    function(){
+        window.open('오늘의 운세(홈에서).html', '_self');
+    }
+);
+});
