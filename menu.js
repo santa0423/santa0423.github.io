@@ -324,7 +324,7 @@ $('.submenu3-4').on('click', function(){
     }
 );
 });
-$('#subfunction').on('click', function(){
+$('.sub').on('click', function(){
     console.log('clicked...');
     $('#object4').animate({
         width: 10000,
