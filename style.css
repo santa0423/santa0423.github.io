@@ -15,6 +15,8 @@
 
 
 * {
+  
+  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,12 +31,20 @@
 
 
 body {
+  padding: 0; margin: 0;
+  width: 100vw; height: 100vh;
+  animation: clip-animation 1s;
+}
+
+#all{
   background-image: url('images/배경화면\ 컬러FFFCE9-04.png');
+  padding: 0; margin: 0;
+  width: 100vw; height: 100vh;
+  animation: clip-animation 3s;
   background-size: cover;
   background-position: center;
   overflow: hidden; /* 페이지 스크롤 막기 */
 }
-
 
 #box {
   position: absolute;
@@ -83,13 +93,15 @@ body {
 /* #subtopic: 로고 하단 */
 
 #subtopic {
+  font-weight: lighter;
+  font-family: "DungGeunMoTTF";
   color: #9e6f6f;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 1vw;
-  font-family: "Cascadia";
+  font-size: 1.2vw;
+
 }
 
 /* #subfunction: 오른쪽 하단 */
@@ -293,7 +305,7 @@ a, a:link, a:hover {
   transform: translate(-50%, -50%);
   width:0px;
   height: 0px;
-  background-color: blueviolet;
+  background-color: #DE8CF2;
   border-radius: 50%;
 
 }

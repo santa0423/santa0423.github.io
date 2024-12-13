@@ -2,6 +2,10 @@
     font-family: "Cascadia";
     src: url("fonts/CascadiaCode_VTT.ttf") format("truetype");
 }
+@font-face {
+  font-family: "DungGeunMoTTF";
+  src: url("fonts/DungGeunMo.ttf") format("truetype");
+}
 
 @font-face {
     font-family: "JalnanGodthicTTF";
@@ -19,10 +23,9 @@
   }
   
   body {
-    background-image: url('images/KakaoTalk_20241105_003421151.jpg');
+    background-image: url('images/배경화면\ 컬러\ 모기-03.png');
     background-size: cover;
     background-position: center;
-    font-family: 'Cascadia';
   }
   
   a, a:link, a:hover {
@@ -72,7 +75,7 @@
     margin-top: 50px;
     width: 100%;
     font-size: 1vw;
-    font-family: "JalnanGodthicTTF";
+    font-family: "DungGeunMoTTF";
   }
   
   #home {

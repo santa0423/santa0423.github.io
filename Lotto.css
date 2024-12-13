@@ -4,11 +4,12 @@
 }
 
 @font-face {
-    font-family: "JalnanGodthicTTF";
-    src: url("fonts/JalnanGothicTTF.ttf") format("truetype");
+  font-family: "DungGeunMoTTF";
+  src: url("fonts/DungGeunMo.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
+  
   margin: 0;
   padding: 0;
   cursor: url('images/카테고리-30.svg')8 8, auto; /* 핫스팟을 이미지 중앙으로 설정 */
@@ -19,10 +20,10 @@
 }
   
   body {
+    font-family: "DungGeunMoTTF";
     background-image: url('images/배경화면\ 컬러-05.png');
     background-size: cover;
     background-position: center;
-    font-family: 'Cascadia';
   }
   
   a, a:link, a:hover {
@@ -74,7 +75,6 @@
     margin-top: 50px;
     width: 100%;
     font-size: 1vw;
-    font-family: "JalnanGodthicTTF";
   }
   
   #home {

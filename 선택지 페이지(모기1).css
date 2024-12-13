@@ -31,7 +31,7 @@ body {
     font-weight:lighter;
     width: 100%;
     padding: 5px 0;  /* 위아래 여백을 줄여서 크기 작게 */
-    background-color: #459637; /* 박스 배경 색상 */
+    background-color: #6eb93c; /* 박스 배경 색상 */
     color: white; /* 글자 색상 */
     text-align: center;
     font-size: 25px;  /* 글자 크기를 조금 작게 */
@@ -76,7 +76,7 @@ body {
 /* 진행 속도 바 */
 .progress-bar {
     height: 100%; /* 바의 높이를 컨테이너와 동일하게 설정 */
-    background-color: #459637; /* 진행 상태의 색상 (초록색) */
+    background-color: #645767; /* 진행 상태의 색상 (초록색) */
     width: 0%; /* 초기값은 0% (처음 시작 시 비어 있음) */
     transition: width 0.3s ease; /* 애니메이션 효과 */
 }
@@ -171,7 +171,7 @@ body {
 /* 하단에 글자가 없는 네모 박스 */
 .bottom-box {
     width: 100%;
-    background-color: #459637; /* 박스 배경 색상 */
+    background-color: #6eb93c; /* 박스 배경 색상 */
     position: fixed; /* 화면 하단에 고정 */
     bottom: 0;
     left: 0;
@@ -187,7 +187,7 @@ body {
 /* 왼쪽 뒤로가기 버튼 스타일 */
 .prev-btn {
     position: absolute;
-    left: 20px; /* 왼쪽 20px 위치 */
+    left: 30px; /* 왼쪽 20px 위치 */
     top: 55%; /* 세로 중앙 */
     transform: translateY(-50%); /* 세로 중앙 정렬 */
 }
@@ -195,7 +195,7 @@ body {
 /* 오른쪽 넘어가기 버튼 스타일 */
 .next-btn {
     position: absolute;
-    right: 50px; /* 오른쪽 50px 위치 */
+    right: 30px; /* 오른쪽 50px 위치 */
     top: 55%; /* 세로 중앙 */
     transform: translateY(-50%); /* 세로 중앙 정렬 */
 }

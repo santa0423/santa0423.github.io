@@ -6,8 +6,8 @@ let angle = 0; // 초기 각도
 const speed = 0.01; // 텍스트의 이동 속도
 const avoidanceRadius = 150; // 마우스를 피할 범위 (더 가까워졌을 때 피하도록 설정)
 const maxAvoidanceDistance = 200; // 마우스를 피할 최대 거리 (더 멀리 피하도록 설정)
-const avoidanceStrength = 0.5; // 마우스를 피할 강도 (값을 키워서 피하는 범위와 강도를 더 키움)
-const randomnessFactor = 0.05; // 비정상적인 움직임을 추가할 강도 (자연스러움을 유지하기 위해 낮게 설정)
+const avoidanceStrength = 0.2; // 마우스를 피할 강도 (값을 낮춰서 피하는 범위를 더 천천히 설정)
+const randomnessFactor = 0.02; // 비정상적인 움직임을 추가할 강도 (자연스러움을 유지하기 위해 낮게 설정)
 const easeFactor = 0.1; // 텍스트가 원래 궤도로 돌아가는 부드러운 강도
 
 // 마우스 위치 추적
@@ -21,7 +21,7 @@ document.addEventListener('mousemove', (event) => {
 });
 
 // 텍스트 클릭 시 이동할 페이지 링크 설정
-const targetPage = '선택지 페이지(로또).html'; // 클릭 시 이동할 페이지
+const targetPage = '선택지 페이지(모기 시작).html'; // 클릭 시 이동할 페이지
 
 // 텍스트 클릭 시 다른 페이지로 이동
 floatingTexts.forEach((text, index) => {
@@ -144,3 +144,5 @@ floatingTexts.forEach(text => {
 
 // 애니메이션 시작
 moveTexts();
+
+
