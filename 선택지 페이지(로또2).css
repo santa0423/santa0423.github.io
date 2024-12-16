@@ -32,7 +32,7 @@ body {
     font-weight:lighter;
     width: 100%;
     padding: 5px 0;  /* 위아래 여백을 줄여서 크기 작게 */
-    background-color: #a978b5; /* 박스 배경 색상 */
+    background-color: #C900C9;/* 박스 배경 색상 */
     color: white; /* 글자 색상 */
     text-align: center;
     font-size: 25px;  /* 글자 크기를 조금 작게 */
@@ -74,13 +74,13 @@ body {
     z-index: 10; /* 다른 요소보다 위로 올리기 */
 }
 
-/* 진행 속도 바 */
 .progress-bar {
-    height: 100%; /* 바의 높이를 컨테이너와 동일하게 설정 */
-    background-color: #645767; /* 진행 상태의 색상 (초록색) */
-    width: 0%; /* 초기값은 0% (처음 시작 시 비어 있음) */
-    transition: width 0.3s ease; /* 애니메이션 효과 */
+    height: 100%;
+    background-color: #C900C9;
+    width: 34%;
+    transition: width 0.3s ease;
 }
+
 
 /* 세로로 나뉜 배경 */
 .main-content {
@@ -90,35 +90,17 @@ body {
 }
 
 /* 왼쪽 배경 색 */
-.left-half {
-    font-size: 25px;
-    background-color: #ffffff; /* 빨간 배경 색 */
-    flex: 1; /* 화면의 절반 크기 */
-    height: 100%; /* 전체 세로 크기 */
-    display: flex; /* 이미지와 텍스트 가운데 정렬을 위한 flex 사용 */
-    flex-direction: column; /* 수직 방향으로 정렬 */
-    justify-content: center; /* 이미지와 텍스트를 수직 중앙에 배치 */
-    align-items: center; /* 수평 중앙 정렬 */
-    text-align: center; /* 텍스트도 중앙 정렬 */
-    padding: 25px; /* 텍스트와 이미지 간 여백 */
-    background-image: none; /* 배경 이미지 숨김 */
-    transition: background-image 0.3s ease; /* 배경 이미지 전환에 부드러운 애니메이션 추가 */
-}
-
-/* 오른쪽 배경 색 */
-.right-half {
-    font-size: 25px;
-    background-color: #ffffff; /* 파란 배경 색 */
-    flex: 1; /* 화면의 절반 크기 */
-    height: 100%; /* 전체 세로 크기 */
-    display: flex; /* 이미지와 텍스트 가운데 정렬을 위한 flex 사용 */
-    flex-direction: column; /* 수직 방향으로 정렬 */
-    justify-content: center; /* 이미지와 텍스트를 수직 중앙에 배치 */
-    align-items: center; /* 수평 중앙 정렬 */
-    text-align: center; /* 텍스트도 중앙 정렬 */
-    padding: 25px; /* 텍스트와 이미지 간 여백 */
-    background-image: none; /* 배경 이미지 숨김 */
-    transition: background-image 0.3s ease; /* 배경 이미지 전환에 부드러운 애니메이션 추가 */
+.left-half, .right-half {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    background-color: #FFCFFF;
+    transition: background-image 0.3s ease;
 }
 
 /* 클릭 가능한 이미지 */
@@ -135,21 +117,18 @@ body {
     transition: transform 0.3s ease; /* 확대/축소에 부드러운 애니메이션 효과 */
 }
 
-/* 클릭된 왼쪽 배경에 배경 이미지 추가 (배경은 크기 변화 없음) */
 .left-half.clicked {
-    background-color: #ff4500; /* 배경 색상 변경 */
-    background-image: url('images/선택효과.png'); /* 배경 이미지 설정 */
-    background-size: 100% 100%; /* 배경 이미지 크기 고정 */
-    background-position: center; /* 배경 이미지 중앙 정렬 */
+    background-color: #E862EF;
+    background-image: url('images/선택효과.png');
+    background-size: 100% 100%;
+    background-position: center;
 }
 
-/* 클릭된 오른쪽 배경에 배경 이미지 추가 (배경은 크기 변화 없음) */
 .right-half.clicked {
-    width: 900px;
-    background-color: #4169e1; /* 배경 색상 변경 */
-    background-image: url('images/선택효과.png'); /* 배경 이미지 설정 */
-    background-size: 100% 100%; /* 배경 이미지 크기 고정 */
-    background-position: center; /* 배경 이미지 중앙 정렬 */
+    background-color: #E862EF;
+    background-image: url('images/선택효과.png');
+    background-size: 100% 100%;
+    background-position: center;
 }
 
 /* 가운데 이미지를 화면에 배치 */
@@ -172,17 +151,17 @@ body {
 /* 하단에 글자가 없는 네모 박스 */
 .bottom-box {
     width: 100%;
-    background-color: #a978b5; /* 박스 배경 색상 */
-    position: fixed; /* 화면 하단에 고정 */
+    background-color: #C900C9;
+    position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 1; /* 초록색 하단 박스를 다른 요소들 위로 표시 */
+    z-index: 1;
     display: flex;
-    justify-content: space-between; /* 양쪽 끝에 버튼 배치 */
+    justify-content: space-between;
     align-items: center;
-    padding-left: 1px;  /* 왼쪽 여백 */
-    padding-right: 20px; /* 오른쪽 여백 */
-    height: 60px; /* 하단 박스의 고정 높이 설정 */
+    padding-left: 1px;
+    padding-right: 20px;
+    height: 60px;
 }
 
 /* 왼쪽 뒤로가기 버튼 스타일 */
