@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모기2</title>
+    <title>모기 선택지 페이지</title>
     <link rel="stylesheet" href="선택지 페이지(모기1).css"> <!-- 외부 CSS 파일 연결 -->
 </head>
 <body>
     
     <!-- 상단에 글자가 있는 박스 -->
     <div class="top-box">
-        <p>방이 어둡네 어떻게 해야할까?</p>
+        <p>아 소리만 들리고 아무것도 안 보여</p>
         <!-- 엑스 버튼 -->
         <a href="Mosquito.html" class="close-btn">
             <img src="images/나가기 버튼-24.png" alt="Close">
@@ -27,18 +27,18 @@
         <div class="left-half">
             <!-- 빨간 배경에 이미지 -->
             <div class="red-background-image">
-                <img src="images/모기 선택 페이지-36.png" alt="Red Background Image" class="clickable-image left-image">
+                <img src="images/모기 선택 페이지-32.png" alt="Red Background Image" class="clickable-image left-image" onclick="setPage('선택지 페이지(모기 물림).html')">
                 <div class="image-text">
-                    <p>불을 켜서 확실히 잡아야겠어</p>
+                    <p>아 그냥 잘래 안 물리겠지</p>
                 </div>
             </div>
         </div>
         <div class="right-half">
             <!-- 파란 배경에 이미지 -->
             <div class="blue-background-image">
-                <img src="images/모기 선택 페이지-35.png" alt="Blue Background Image" class="clickable-image right-image">
+                <img src="images/모기 선택 페이지-29.png" alt="Blue Background Image" class="clickable-image right-image" onclick="setPage('선택지 페이지(모기안물림).html')">
                 <div class="image-text">
-                    <p>귀찮네.. 그냥 후레쉬를 켜야겠다</p>
+                    <p>물리기 싫은데.. 절대 못자..</p>
                 </div>
             </div>
         </div>
@@ -52,15 +52,15 @@
     <!-- 하단에 글자가 없는 박스 -->
     <div class="bottom-box">
         <!-- 왼쪽 뒤로가기 버튼 -->
-        <a href="선택지 페이지(모기1).html" class="prev-btn">
+        <a href="javascript:void(0);" class="prev-btn" onclick="querySelector();">
             <img src="images/뒤로가기 버튼-37.png" alt="Back">
         </a>
         <!-- 오른쪽 넘어가기 버튼 -->
-        <a href="선택지 페이지(모기3).html" class="next-btn">
+        <a href="javascript:void(0);" class="next-btn" onclick="redirectToPage();">
             <img src="images/넘어가기 버튼-36.png" alt="Next">
         </a>
     </div>
 
-    <script src="선택지 페이지(로또2).js"></script> <!-- 외부 JavaScript 파일 연결 -->
+    <script src="선택지 페이지(모기2).js"></script> <!-- 외부 JavaScript 파일 연결 -->
 </body>
 </html>

@@ -1,28 +1,10 @@
-// 진행 상태 추적 변수
-let progress = 0;
 
-// 페이지 로드 시 진행 상태 초기화
-window.onload = function() {
-    progress = 0;
-    updateProgressBar(progress); // 진행 상태 바 업데이트
-};
 
-// 진행 상태 바 업데이트
-const progressBar = document.querySelector('.progress-bar');
-function updateProgressBar(value) {
-    progress = value;
-    progressBar.style.width = progress + '%'; // 진행 상태 바의 너비 업데이트
-}
-
-// "뒤로가기" 버튼 클릭 시 진행 상태 0으로 초기화
+// "뒤로가기" 버튼 클릭 시 이전 페이지로 돌아가기
 const prevButton = document.querySelector('.prev-btn');
 prevButton.addEventListener('click', function() {
-    progress = 0;
-    updateProgressBar(progress);
+    history.back();  // 브라우저의 이전 페이지로 돌아갑니다.
 });
-
-// 선택한 페이지 URL을 저장
-var selectedPage = "";
 
 // 선택지 클릭 시 페이지 URL 설정
 function setPage(pageUrl) {
@@ -38,13 +20,14 @@ function redirectToPage() {
     }
 }
 
-// 버튼 클릭 시 효과
+// 버튼 클릭 시 효과 (클릭한 버튼에 "클릭 효과" 클래스 추가)
 function addClickEffect(button) {
     button.classList.add("clicked");
     setTimeout(function() {
         button.classList.remove("clicked");
     }, 200);
 }
+
 // 이미지 클릭 시 확대 및 배경 이미지 변경
 const images = document.querySelectorAll('.clickable-image');
 const leftHalf = document.querySelector('.left-half');
@@ -75,10 +58,10 @@ images.forEach(image => {
             image.classList.add('clicked');
             if (image.closest('.left-half')) {
                 leftHalf.classList.add('clicked');
-                leftHalf.style.backgroundImage = 'url(image/선택 페이지-10.png)'; // 배경 이미지 설정
+                leftHalf.style.backgroundImage = 'url(images/선택 페이지-10.png)'; // 배경 이미지 설정
             } else if (image.closest('.right-half')) {
                 rightHalf.classList.add('clicked');
-                rightHalf.style.backgroundImage = 'url(image/선택 페이지-10.png)'; // 배경 이미지 설정
+                rightHalf.style.backgroundImage = 'url(images/선택 페이지-10.png)'; // 배경 이미지 설정
             }
         }
     });
