@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 선택지 페이지</title>
+    <link rel="stylesheet" href="선택지 페이지(로또1).css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+    
+    <!-- 상단에 글자가 있는 박스 -->
+    <div class="top-box">
+        <p>얼마나 사지?</p>
+        <!-- 엑스 버튼 -->
+        <a href="Lotto.html" class="close-btn">
+            <img src="images/나가기 버튼-24.png" alt="Close">
+        </a>
+    </div>
+
+    <!-- 이야기 진행 속도 바 -->
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- 두 개의 세로로 나뉜 배경 -->
+    <div class="main-content">
+        <div class="left-half">
+            <!-- 빨간 배경에 이미지 -->
+            <div class="red-background-image">
+                <img src="images/연애 선택 페이지-45.png" alt="Red Background Image" class="clickable-image left-image" onclick="setPage('선택지 페이지(연애혼자).html')">
+                <div class="image-text">
+                    <p>열심히 꾸며가야지 ㅋ</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-half">
+            <!-- 파란 배경에 이미지 -->
+            <div class="blue-background-image">
+                <img src="images/연애 선택 페이지-46.png" alt="Blue Background Image" class="clickable-image right-image" onclick="setPage('선택지 페이지(연애친구들).html')">
+                <div class="image-text">
+                    <p>머리가 많으니 좋은 방법이 있을거야</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 가운데 이미지 -->
+    <div class="center-image">
+        <img src="images/선택 페이지-06-06-06-06.png" alt="Center Image">
+    </div>
+
+    <!-- 하단에 글자가 없는 박스 -->
+    <div class="bottom-box">
+        <!-- 왼쪽 뒤로가기 버튼 -->
+        <a href="javascript:void(0);" class="prev-btn" onclick="querySelector();">
+            <img src="images/뒤로가기 버튼-37.png" alt="Back">
+        </a>
+        <!-- 오른쪽 넘어가기 버튼 -->
+        <a href="javascript:void(0);" class="next-btn" onclick="redirectToPage();">
+            <img src="images/넘어가기 버튼-36.png" alt="Next">
+        </a>
+    </div>
+
+    <script src="선택지 페이지(로또1).js"></script> <!-- 외부 JavaScript 파일 연결 -->
+</body>
+</html>
