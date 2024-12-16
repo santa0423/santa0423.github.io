@@ -284,7 +284,7 @@ $('.submenu3-1').on('click', function(){
     }, 
     700, // 애니메이션 시간
     function(){
-        window.open('공사중.html', '_self');
+        window.open('Love.html', '_self');
     }
 );
 });

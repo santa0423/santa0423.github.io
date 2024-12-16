@@ -10,7 +10,7 @@
     
     <!-- 상단에 글자가 있는 박스 -->
     <div class="top-box">
-        <p>로또를 어떻게 구매하는게 좋을까?</p>
+        <p>로또는 어떻게 사는게 좋을까?</p>
         <!-- 엑스 버튼 -->
         <a href="Lotto.html" class="close-btn">
             <img src="images/나가기 버튼-24.png" alt="Close">
@@ -27,18 +27,18 @@
         <div class="left-half">
             <!-- 빨간 배경에 이미지 -->
             <div class="red-background-image">
-                <img src="images/선택 페이지-09.png" alt="Red Background Image" class="clickable-image left-image">
+                <img src="images/로또 선택 페이지-26.png" alt="Red Background Image" class="clickable-image left-image" onclick="setPage('선택지 페이지(로또자동).html')">
                 <div class="image-text">
-                    <p>자동으로 구매한다</p>
+                    <p>자동</p>
                 </div>
             </div>
         </div>
         <div class="right-half">
             <!-- 파란 배경에 이미지 -->
             <div class="blue-background-image">
-                <img src="images/선택 페이지-08.png" alt="Blue Background Image" class="clickable-image right-image">
+                <img src="images/로또 선택 페이지-30.png" alt="Blue Background Image" class="clickable-image right-image" onclick="setPage('선택지 페이지(로또수동).html')">
                 <div class="image-text">
-                    <p>수동으로 구매한다</p>
+                    <p>수동</p>
                 </div>
             </div>
         </div>
@@ -55,11 +55,12 @@
         <a href="repulsion.html" class="prev-btn">
         </a>
         <!-- 오른쪽 넘어가기 버튼 -->
-        <a href="선택지 페이지(로또2).html" class="next-btn">
+        <a href="javascript:void(0);" class="next-btn" onclick="redirectToPage();">
             <img src="images/넘어가기 버튼-36.png" alt="Next">
         </a>
     </div>
 
+
     <script src="선택지 페이지(로또1).js"></script> <!-- 외부 JavaScript 파일 연결 -->
 </body>
-</html> 
+</html>

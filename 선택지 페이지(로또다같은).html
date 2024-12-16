@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로또 선택지 페이지 1</title>
-    <link rel="stylesheet" href="선택지 페이지(로또2).css"> <!-- 외부 CSS 파일 연결 -->
+    <title>로또 선택지 페이지</title>
+    <link rel="stylesheet" href="선택지 페이지(로또1).css"> <!-- 외부 CSS 파일 연결 -->
 </head>
 <body>
     
     <!-- 상단에 글자가 있는 박스 -->
     <div class="top-box">
-        <p>번호를 어떻게 하는게 좋을까?</p>
+        <p>번호는 어떻게 하지?</p>
         <!-- 엑스 버튼 -->
         <a href="Lotto.html" class="close-btn">
-            <img src="images/나가기 버튼-07.png" alt="Close">
+            <img src="images/나가기 버튼-24.png" alt="Close">
         </a>
     </div>
 
@@ -27,18 +27,18 @@
         <div class="left-half">
             <!-- 빨간 배경에 이미지 -->
             <div class="red-background-image">
-                <img src="images/9.png" alt="Red Background Image" class="clickable-image left-image">
+                <img src="images/로또 선택 페이지-42.png" alt="Red Background Image" class="clickable-image left-image" onclick="setPage('선택지 페이지(로또세탁).html')">
                 <div class="image-text">
-                    <p>전부 같은 번호로 고른다</p>
+                    <p>그냥 대충 주머니에 넣을래</p>
                 </div>
             </div>
         </div>
         <div class="right-half">
             <!-- 파란 배경에 이미지 -->
             <div class="blue-background-image">
-                <img src="images/10.png" alt="Blue Background Image" class="clickable-image right-image">
+                <img src="images/로또 선택 페이지-31.png" alt="Blue Background Image" class="clickable-image right-image" onclick="setPage('선택지 페이지(로또당첨).html')">
                 <div class="image-text">
-                    <p>전부 다른 번호로 고른다</p>
+                    <p>귀찮긴해도 지갑에 넣어야지</p>
                 </div>
             </div>
         </div>
@@ -52,15 +52,15 @@
     <!-- 하단에 글자가 없는 박스 -->
     <div class="bottom-box">
         <!-- 왼쪽 뒤로가기 버튼 -->
-        <a href="선택지 페이지(로또1).html" class="prev-btn">
-            <img src="images/뒤로가기 버튼.png" alt="Back">
+        <a href="repulsion.html" class="prev-btn">
         </a>
         <!-- 오른쪽 넘어가기 버튼 -->
-        <a href="선택지 페이지(로또3).html" class="next-btn">
-            <img src="images/넘어가기 버튼.png" alt="Next">
+        <a href="javascript:void(0);" class="next-btn" onclick="redirectToPage();">
+            <img src="images/넘어가기 버튼-36.png" alt="Next">
         </a>
     </div>
 
-    <script src="선택지 페이지(로또2).js"></script> <!-- 외부 JavaScript 파일 연결 -->
+
+    <script src="선택지 페이지(로또1).js"></script> <!-- 외부 JavaScript 파일 연결 -->
 </body>
 </html>

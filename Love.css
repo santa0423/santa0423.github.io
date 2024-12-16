@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Cascadia";
+    src: url("fonts/CascadiaCode_VTT.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DungGeunMoTTF";
+  src: url("fonts/DungGeunMo.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  
+  margin: 0;
+  padding: 0;
+  cursor: url('images/카테고리-30.svg')8 8, auto;
+}
+
+*:active {
+  cursor: url('images/카테고리-31.svg')8 8, auto;
+}
+
+#all{
+  font-family: "DungGeunMoTTF";
+  background-image: url('images/사랑\ 배경화면\ 컬러-08.png');
+  padding: 0; margin: 0;
+  width: 100vw; height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* 페이지 스크롤 막기 */
+}
+@keyframes clip-animation {
+  0% { clip-path: circle(0% at 50% 50%); }
+  100% { clip-path: circle(100% at 50% 50%); }
+}
+  
+  body {
+    animation: clip-animation 2s;
+    background-color: #7DB1EA;
+  }
+  
+  a, a:link, a:hover {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  #box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+  }
+  
+  #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*background-color: antiquewhite;*/
+  }
+  
+  #logo img {
+    max-width: 60%;
+    transform: translateY(-8%);
+}
+  
+  #topic {
+    color: #6682a0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+    font-size: 0.4vw;
+    font-family: "Cascadia";
+  }
+  
+  #subtopic {
+    color: #6682a0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    font-size: 1vw;
+  }
+  
+  #home {
+    position: fixed;
+    left: 50px;
+    bottom: 45px;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 1000;
+  }
+  
+  #home img {
+    width: 6.5vw;
+    height: auto;
+  }
+  #home:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+  
+  #floating-letter {
+    font-family: "JalnanGodthicTTF";
+    width: 30px;
+  }
+  
+  .content-container {
+    text-align: center;
+    position: relative;
+  }
+  .floating-text img {
+    max-width: 40px;
+    max-height: 40px; 
+    width: auto;
+    height: auto; 
+} 
+  
+  .floating-text:nth-child(odd) {
+    font-style: italic;
+  }
+  
+  .floating-text:nth-child(even) {
+    text-transform: uppercase;
+  }
+  
+  #object2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0; 
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 9999;
+    transition: all 1s ease;
+}
+
+
+
+
+

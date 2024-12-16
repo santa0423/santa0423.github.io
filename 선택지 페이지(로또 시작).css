@@ -15,7 +15,7 @@ cursor: url('images/카테고리-31.svg')8 8, auto; /* 클릭 시 커서 이미�
 }
 
 body {
-  color: #986f9e;
+  color: #de8cf2;
   font-family: "DungGeunMoTTF";
   display: flex;
   flex-direction: column; /* 세로 방향으로 요소들을 배치 */

@@ -1,36 +1,32 @@
-// 진행 상태 추적 변수
-let progress = 0;
 
-// 페이지 로드 시 진행 상태 초기화
-window.onload = function() {
-    // 페이지가 새로 고침될 때마다 진행 상태를 0으로 초기화
-    progress = 0;
-    updateProgressBar(progress); // 진행 상태 바 업데이트
-};
 
-// 진행 상태 바 업데이트
-const progressBar = document.querySelector('.progress-bar');
-function updateProgressBar(value) {
-    progress = value;
-    progressBar.style.width = progress + '%'; // 진행 상태 바의 너비 업데이트
-}
-
-// "다음 페이지" 버튼 클릭 시 진행 상태 업데이트
-const nextButton = document.querySelector('.next-btn');
-nextButton.addEventListener('click', function() {
-    if (progress < 100) {
-        progress += 25;  // 각 단계별로 25%씩 진행 상태 증가
-        if (progress > 100) progress = 100; // 100%를 초과하지 않도록 제한
-        updateProgressBar(progress);  // 진행 상태 업데이트
-    }
-});
-
-// "뒤로가기" 버튼 클릭 시 진행 상태 0으로 초기화
+// "뒤로가기" 버튼 클릭 시 이전 페이지로 돌아가기
 const prevButton = document.querySelector('.prev-btn');
 prevButton.addEventListener('click', function() {
-    progress = 0;  // 진행 상태 초기화
-    updateProgressBar(progress);  // 진행 상태 바 초기화
+    history.back();  // 브라우저의 이전 페이지로 돌아갑니다.
 });
+
+// 선택지 클릭 시 페이지 URL 설정
+function setPage(pageUrl) {
+    selectedPage = pageUrl;
+}
+
+// "다음 페이지" 버튼 클릭 시 페이지 이동
+function redirectToPage() {
+    if (selectedPage) {
+        window.location.href = selectedPage;
+    } else {
+        alert("페이지를 선택하세요.");
+    }
+}
+
+// 버튼 클릭 시 효과 (클릭한 버튼에 "클릭 효과" 클래스 추가)
+function addClickEffect(button) {
+    button.classList.add("clicked");
+    setTimeout(function() {
+        button.classList.remove("clicked");
+    }, 200);
+}
 
 // 이미지 클릭 시 확대 및 배경 이미지 변경
 const images = document.querySelectorAll('.clickable-image');
@@ -62,10 +58,10 @@ images.forEach(image => {
             image.classList.add('clicked');
             if (image.closest('.left-half')) {
                 leftHalf.classList.add('clicked');
-                leftHalf.style.backgroundImage = 'url(image/선택 페이지-10.png)'; // 배경 이미지 설정
+                leftHalf.style.backgroundImage = 'url(images/선택 페이지-10.png)'; // 배경 이미지 설정
             } else if (image.closest('.right-half')) {
                 rightHalf.classList.add('clicked');
-                rightHalf.style.backgroundImage = 'url(image/선택 페이지-10.png)'; // 배경 이미지 설정
+                rightHalf.style.backgroundImage = 'url(images/선택 페이지-10.png)'; // 배경 이미지 설정
             }
         }
     });
