@@ -2,7 +2,7 @@ document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', () => {
     // 이동 가능한 페이지 목록
     const pages = [
-'공사중.html'
+'연애운세1.html','연애운세2.html','연애운세3.html','연애운세4.html','연애운세5.html'
     ];
 
     // 랜덤으로 페이지 선택

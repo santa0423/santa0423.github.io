@@ -62,7 +62,7 @@ body {
 /* 이야기 진행 속도 바 */
 .progress-bar-container {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: #367cc1;
     height: 10px;
     position: fixed;
     top: 60px;
@@ -72,7 +72,7 @@ body {
 
 .progress-bar {
     height: 100%;
-    background-color: #005AC6;
+    background-color: #367cc1;
     width: 34%;
     transition: width 0.3s ease;
 }
